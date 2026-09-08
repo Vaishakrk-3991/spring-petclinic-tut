@@ -1,0 +1,4 @@
+FROM maven:3.9-eclipse-temurin-17-alpine AS build
+ADD https://github.com/spring-projects/spring-petclinic.git /app
+WORKDIR /app
+RUN mvn package
